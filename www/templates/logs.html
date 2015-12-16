@@ -1,0 +1,11 @@
+<ion-view view-title="Logs" ng-o>
+    <ion-content>
+        <h3 class="myHeader">Error Logs </h3>
+      <ion-list>
+        <ion-item ng-repeat="log in logs track by $index" class="log-item">
+        {{log}}
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+</ion-view>

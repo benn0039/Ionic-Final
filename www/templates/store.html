@@ -1,0 +1,27 @@
+<ion-view view-title="Stores">
+    <ion-content>
+
+      <form class="bar bar-header item-input-inset" ng-submit="searchForStores(search)">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="search" name="searchInput">
+        </label>
+        <input class="button-positive button" type="submit" value="Search">
+        </input>
+      </form>
+        <h3 class="myHeader">Enter a region or city above or search for closest store below.</h3>
+      <button class="button button-outline button-positive my-button" ng-click="searchGPS()">Search using GPS</button>
+        <!--<div class="list" ng-repeat="store in stores.stores">-->
+          <ul class="list list-inset">
+            <li class="item" ng-repeat="store in stores.stores">
+              <h2 class="listHeader">{{store.name}}</h2>
+              <p class="storelist">{{store.address}}</p>
+              <p class="storelist">{{store.city}}, {{store.region}} Phone: {{store.phone}}</p>
+            </li>
+          </ul>
+
+
+
+        <!--</div>-->
+    </ion-content>
+</ion-view>

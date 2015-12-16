@@ -1,0 +1,32 @@
+<ion-view view-title="Home">
+  <ion-content>
+     <div class="wrapper">
+        <!--<h3 class="myHeader">Facebook App</h3>-->
+        <h4> Best Buy Companion App</h4>
+
+        <button class="button button-positive button-outline button-block"
+                ng-click="authenticate('facebook')"
+                ng-show="!isAuthenticated() && !isLoggedIn"
+                >
+            Login with Facebook
+        </button>
+
+         <button class="button button-assertive button-outline button-block"
+                 ng-click="logout()"
+                 ng-show="isAuthenticated() || isLoggedIn"
+                 >
+             Log Out
+         </button>
+
+       <button class="button button-clear button-outline button-block"
+                ng-click="login()"
+                ng-show="!isAuthenticated() && !isLoggedIn"
+                >
+         Local Login
+       </button>
+
+
+       <p ng-show="isAuthenticated() || isLoggedIn">Hello {{loginData.username}}</p>
+     </div>
+  </ion-content>
+</ion-view>
